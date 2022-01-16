@@ -1,6 +1,8 @@
 # chess-api
 A chess API written in Python using the Tornado web server that interfaces with the Stockfish engine.
 
+Python-Chess API that interface with  Stockfish Engine API : https://python-chess.readthedocs.io/en/v0.23.10/uci.html
+
 To run this, it's probably best you set up a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/) first 
 in case the version of Python running on your machine isn't compatible with this project, which requires >=3.5.
 
