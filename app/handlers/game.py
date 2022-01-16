@@ -65,7 +65,6 @@ class GameHandler(BaseHandler):
         """
 
         best_move = self.get_best_move(board)
-
         output = OrderedDict([
 
             ('fen', board.fen()),
