@@ -3,7 +3,7 @@ from tornado.options import options
 
 engine = uci.popen_engine(options.path_to_engine)
 engine.uci()
-localOptions = { "UCI_LimitStrength" : true, "UCI_Elo" : 1350}
+localOptions = { "UCI_LimitStrength" : True, "UCI_Elo" : 1350}
 engine.setoption(localOptions)
 
 
