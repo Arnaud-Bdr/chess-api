@@ -3,7 +3,7 @@ from tornado.options import options
 
 engine = uci.popen_engine(options.path_to_engine)
 engine.uci()
-localOptions = { "Skill Level" : 3 }
+localOptions = { "UCI_LimitStrength" : true, "UCI_Elo"=1350}
 engine.setoption(localOptions)
 
 
