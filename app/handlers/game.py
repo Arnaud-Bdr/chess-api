@@ -56,7 +56,7 @@ class GameHandler(BaseHandler):
         engine.ucinewgame()
         engine.position(board)
 
-        best_move, ponder_move = engine.go()
+        best_move, ponder_move = engine.go(depth=1)
 
         return best_move.uci()
 
