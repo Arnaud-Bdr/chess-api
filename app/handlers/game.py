@@ -55,7 +55,7 @@ class GameHandler(BaseHandler):
         engine.isready()
         engine.ucinewgame()
         engine.position(board)
-        best_move, ponder_move = engine.go(movetime=1000)
+        best_move, ponder_move = engine.go(movetime=100)
         return best_move.uci()
 
     def write_json(self, board:chess.Board):
