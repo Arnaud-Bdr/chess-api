@@ -2,7 +2,7 @@ from collections import OrderedDict
 from tornado import gen
 import chess
 
-from app.handlers import BaseHandler, engine
+from app.handlers import BaseHandler, engine, info_handler
 
 
 class GameHandler(BaseHandler):
@@ -63,7 +63,6 @@ class GameHandler(BaseHandler):
         """
         Writes all of the board info in json
         """
-
         best_move = self.get_best_move(board)
         output = OrderedDict([
 
@@ -91,6 +90,7 @@ class GameHandler(BaseHandler):
                 ('color', 'white' if board.turn is chess.WHITE else 'black'),
                 ('isInCheck', board.is_check()),
                 ('bestMove', best_move),
+                ('eval', info_handler.info["score"]),
                 ('legalMoves', [move.uci() for move in board.legal_moves]),
                 ('canClaimDraw', board.can_claim_draw()),
                 ('canClaimFiftyMoves', board.can_claim_fifty_moves()),
@@ -98,7 +98,6 @@ class GameHandler(BaseHandler):
             ])),
 
         ])
-
         self.finish(output)
 
     def write_ascii(self, board:chess.Board):
