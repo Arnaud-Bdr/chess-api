@@ -9,5 +9,5 @@ in case the version of Python running on your machine isn't compatible with this
 Then you should just start the virtual environment, run `pip install -r requirements.txt` from the root of the project 
 to install the dependencies, and then start it with `python3 main.py`.
 
-Right now Windows isn't supported because I haven't added the corresponding Stockfish exe yet !
+Right now Windows isn't supported because I haven't added the corresponding Stockfish exe yet .
 
